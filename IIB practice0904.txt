@@ -1,0 +1,227 @@
+Day 1
+
+IIB versions
+MSQI
+WMB 6 7 8-->
+IIB 9 10
+App connect 11
+
+What is IIB?
+IBM Integration Bus helps enterprises to connect different types of applications (by defining message flows between them). For instance, IIB can be used to integrate all the internal and external applications
+
+
+Required softwares:
+IIB (toolkit --Development
+     console --Admin)
+MQ 
+Soap UI -->https://www.soapui.org/downloads/latest-release/
+Rfhutils
+Postman  -->https://www.postman.com/downloads/
+MSSQL Database
+MSSQL Mangement studio
+Oracle Database
+Oracle Sql developer
+notepad++ -->https://en.softonic.com/download/notepad-plus/windows/post-download
+
+Messaging formats:
+Json
+XML
+Soap
+
+
+{
+"pan":"ZXCV123445",
+"Aadhaar":"111122223333",
+"mobilenumber":"9999999999"
+}
+Jsonlint website online to verify json
+{
+	"AccountDetails": {
+		"PersonalDetails": {
+			"name": "naresh",
+			"mobilenumber": "9999999999",
+			"DOB": "25-11-1999"
+		},
+		"IdProofs": {
+			"pan": "ZXCV123445",
+			"Aadhaar": "111122223333"
+		},
+		"AddressDetails": {
+			"HNo": "3-300",
+			"addressline1": "suraram col",
+			"pincode": "500055"
+		}
+	}
+}
+
+
+
+parameters,tags,elements
+
+<AccountDeatils>
+<pan>ZXCV123445</pan>
+<Aadhaar>111122223333</Aadhaar>
+<mobilenumber>9999999999</mobilenumber>
+</AccountDeatils>
+
+AccountDeatils-->parent element
+pan-->child elements
+
+   <AccountDetails>
+      <AddressDetails>
+         <HNo>3-300</HNo>
+         <addressline1>suraram col</addressline1>
+         <pincode>500055</pincode>
+      </AddressDetails>
+      <IdProofs>
+         <Aadhaar>111122223333</Aadhaar>
+         <pan>ZXCV123445</pan>
+      </IdProofs>
+      <PersonalDetails>
+         <DOB>25-11-1999</DOB>
+         <mobilenumber>9999999999</mobilenumber>
+         <name>naresh</name>
+      </PersonalDetails>
+   </AccountDetails>
+==========================================================================
+Day2
+Soap
+https://www.tutorialspoint.com/soap/soap_message_structure.htm
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV = "http://www.w3.org/2001/12/soap-envelope" 
+   SOAP-ENV:encodingStyle = "http://www.w3.org/2001/12/soap-encoding">
+
+   <SOAP-ENV:Header>
+      ...
+      ...
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      ...
+      ...
+      <SOAP-ENV:Fault>
+         ...
+         ...
+      </SOAP-ENV:Fault>
+      ...
+   </SOAP-ENV:Body>
+</SOAP_ENV:Envelope>
+
+
+Example:
+<SOAP-ENV:Envelope xmlns:SOAP-ENV = "http://www.w3.org/2001/12/soap-envelope" 
+   SOAP-ENV:encodingStyle = "http://www.w3.org/2001/12/soap-encoding">
+
+   <SOAP-ENV:Header>     
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:pan>ZXCV123445</SOAP-ENV:pan>
+   </SOAP-ENV:Body>
+</SOAP_ENV:Envelope>
+
+
+IBM Knowledge center 
+https://www.ibm.com/support/knowledgecenter/en/SSMKHH_10.0.0/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.html
+
+
+Application Development perspective
+Administration perspective
+Integration Development perspective
+Debug Perspective
+Java perspective
+
+=========02-04-2021 class=================
+Addition subtraction tasks in xml json
+=========03-04-2021 class=================
+
+We can create multiple message flows in a single application
+cast function
+HTTP get method & post method difference
+Export & Import Applications
+
+Task 1 get method
+
+
+{
+	"AccountDetails": {
+		"PersonalDetails": {
+			"name": "naresh",
+			"mobilenumber": "9999999999",
+			"DOB": "25-11-1999"
+		},
+		"IdProofs": {
+			"pan": "ZXCV123445",
+			"Aadhaar": "111122223333"
+		},
+		"AddressDetails": {
+			"HNo": "3-300",
+			"addressline1": "suraram col",
+			"pincode": "500055"
+		}
+	}
+}
+
+Task 2 get method
+<AccountDetails>
+      <AddressDetails>
+         <HNo>3-300</HNo>
+         <addressline1>suraram col</addressline1>
+         <pincode>500055</pincode>
+      </AddressDetails>
+      <IdProofs>
+         <Aadhaar>111122223333</Aadhaar>
+         <pan>ZXCV123445</pan>
+      </IdProofs>
+      <PersonalDetails>
+         <DOB>25-11-1999</DOB>
+         <mobilenumber>9999999999</mobilenumber>
+         <name>naresh</name>
+      </PersonalDetails>
+   </AccountDetails>
+=========================08-04-2021===========================
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=operators-esql-complex-comparison
+
+Operator BETWEEN
+Use the BETWEEN operator to test whether a value lies between two boundary values.
+BETWEEN operator
+Read syntax diagramSkip visual syntax diagram
+expression
+NOT
+BETWEEN
+ASYMMETRIC
+SYMMETRIC
+endpoint_1
+AND
+endpoint_2
+
+
+Operator EXISTS
+EXISTS operator
+Read syntax diagramSkip visual syntax diagram
+Operand
+(
+ListExpression
+)
+The operator EXISTS returns a Boolean value that indicates whether a SELECT function returned one or more values (TRUE) or none (FALSE).
+EXISTS(SELECT * FROM something WHERE predicate)
+
+complex comparision operators
+
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=operators-esql-complex-comparison
+
+BETWEEN
+IN
+LIKE
+
+
+We will see below operators  while working DB
+EXITS
+SINGULAR
+IS
+
+===============09-04-2021===========
+
+Rules for ESQL operator precedence
+CASE statement
+CREATE statement
+Task Link
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=statements-create-statement
